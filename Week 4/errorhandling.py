@@ -1,25 +1,24 @@
 # 2. Error Handling Lab 🧪: Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
 
 # asking the user for a filename
-filename = input("Enter the filename:")
+while True:
+    try:
+        # Ask user for input
+        filename = input("Enter the name of the file: ")
+        with open(filename, 'r') as file:
+            content = file.read()
 
-try: 
-   with open(filename,'r') as file:
-      content = file.read()
-    
+            # file doesn’t exist error
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' doesn't exist. Please try again.")
 
-      # file doesn’t exist
-except FileNotFoundError:
-   print(f"Error: the file '{filename}' doesn't exist")
-   
-     # file can't be read
-except PermissionError:
-    print(f"\nError: You don't have permission to read '{filename}' ")
-
-else: 
-     print(content)
-   
- 
+         # file can't be read
+    except PermissionError:
+        print(f"Error: You don't have permission to read '{filename}'. Please try another file.")
+    else:
+        print(f"Contents of file '{filename}': ")
+        print(content)
+        break  # Exit the loop when the file is successfully read
 
 
 
