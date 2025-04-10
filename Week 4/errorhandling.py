@@ -1,5 +1,6 @@
 # 2. Error Handling Lab 🧪: Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
 
+# asking the user for a filename
 filename = input("Enter the filename:")
 
 try: 
