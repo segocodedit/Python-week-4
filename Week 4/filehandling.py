@@ -23,22 +23,5 @@ with open("modify.txt", "w") as f:
   f.write(content)
 
 
-## 2. Error Handling Lab 🧪: Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
-
-# ask user for filename
-filename = input("Enter the filename:")
-
-try: 
-   with open(filename,'r') as file:
-      content = file.read()
-      print.content
-      # file doesn’t exist
-except FileNotFoundError:
-   print(f"Error: the file '{filename}' doesn't exist")
-     # file can't be read
-except PermissionError:
-    print(f"\nError: You don't have permission to read '{filename}' ")
- 
-
 
 
