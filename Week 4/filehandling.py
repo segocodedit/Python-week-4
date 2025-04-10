@@ -1,6 +1,6 @@
 ## File Read & Write Challenge 🖋️: Create a program that reads a file and writes a modified version to a new file.
 
-# Create new file using with
+# Create new file using 
 try:  
  with open('myfile.txt','x') as f:
     print(f.read())
@@ -11,7 +11,7 @@ except FileExistsError:
 with open('myfile.txt','a') as f:
     f.write("I love cake \n")
 
-# Read in the new file 
+# Read the new file 
 with open('myfile.txt','r') as f:
    print(f.read())
 
