@@ -10,7 +10,7 @@ filename = input("Enter the filename:")
 try: 
    with open(filename,'r') as file:
       content = file.read()
-      print(content)
+    
 
       # file doesn’t exist
 except FileNotFoundError:
@@ -19,6 +19,10 @@ except FileNotFoundError:
      # file can't be read
 except PermissionError:
     print(f"\nError: You don't have permission to read '{filename}' ")
+
+else: 
+     print(content)
+   
  
 
 
