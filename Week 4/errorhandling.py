@@ -1,9 +1,4 @@
-# try:  
-#  with open('tests.txt') as f:
-#     print(f.read())
-# except: 
-#    print("File was not found")
-
+# 2. Error Handling Lab 🧪: Ask the user for a filename and handle errors if it doesn’t exist or can’t be read.
 
 filename = input("Enter the filename:")
 
